@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html alng="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tea</title>
+        <link rel="stylesheet" href="../css/Tea ceremony japanese.css">
+    </head>
+    <body> 
+        <ul>
+            <li><a class="#active" href="/blog">Blog</a></li>
+            <li class="news"><a href="/news">News</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li> <a class="login" href="/login">Login</a></li>
+          </ul>
+
+    <form action="/tea" method="POST">
+    <div class="blog-post">
+            <div class="blog-post"__img>
+                <img src="../<%= post.file %>">
+            </div>
+            <div class="blog-post"__img>
+                <img src="../<%= post.d_file %>">
+            </div>
+            <div class="blog-post__info">
+                <div class="blog-post__date">
+                    <span><%= post.date %></span>
+                </div>
+                <h1 class="blog-post__title"> <%= post.title %> </h1>
+                <p class="blog-post__text"><%= post.d_description %></p>
+                <a href="/news" class="blog-post__cta">Back</a>
+            </div>
+        </div>   
+   
+ 
+        <script>  </script>
+    </body>
+</html>

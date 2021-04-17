@@ -1,0 +1,171 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+  <link rel="stylesheet" href="../css/creare(users).css">
+  <title>Add User</title>
+<body>
+  <header>
+      <div class="logo">
+          <h1 class="logo-text"><span>Blog</span>Page</h1>
+      </div>
+      <form action="/register" method="POST" ></form>
+      <i class="fa fa-bars menu-toggle"></i>
+      <ul class="nav">
+          <li>
+              <a href="#">
+                  <i class="fa fa-user"></i>
+                 Urtaa
+                  <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+              </a>
+              <ul>
+                  <li><a href="/" class="logout">Logout</a></li>
+              </ul>
+          </li>
+      </ul>
+  </header>
+  <div class="admin-wrapper">
+      <div class="left-sidebar">
+          <ul>
+            <li><a href="/admin"><i class="fa fa-user"></i> Posts</a></li>
+            <li><a href="/indexusers"><i class="fa fa-user"></i> Users</a></li>
+          </ul>
+      </div>
+      <!-- Admin Content -->
+      <div class="admin-content">
+          <div class="button-group">
+              <a href="/creare" class="btn btn-big">Add User</a>
+              <a href="/admin" class="btn btn-big">Manage Users</a>
+          </div>
+          <div class="content">
+          <h2 class="page-title">Add Topic</h2>
+          <!--uploads (Img) -->
+          <form
+           action="/editposts/<%= users.posts_id %>"
+            method="POST"
+           enctype="multipart/form-data"
+          >
+            <div>
+              <label>Upload image</label>
+              <input
+                type="file"
+                name="avatar"
+                class="text-input"
+                multiple
+                
+                value="<%= users.file %>"
+                required
+              />
+            </div>
+            <div>
+              <label>Upload D_image</label>
+              <input
+                type="file"
+                name="avatar1"
+                class="text-input"
+                multiple
+                value="<%= users.d_file %>"
+                required
+              />
+            </div>
+            <div>
+              <label>Title</label>
+              <input type="text" name="title" class="text-input" value="<%= users.title %>" required />
+            </div>
+            <div>
+              <label>Description</label>
+              <input
+                type="text"
+                name="description"
+                class="text-input"
+                value="<%= users.description %>"
+                required
+              />
+            </div>
+            <div>
+              <label>D_Description</label>
+              <input
+                type="text"
+                name="description1"
+                class="text-input"
+                value="<%= users.d_description %>"
+              />
+            </div>
+            <div>
+              <label>Category</label>
+              <select name="category" class="text-input" required>
+                  <option value="<%= users.category %>">about Mongolia</option>
+                  <option value="<%= users.category %>">about Japan</option>
+                  <option value="<%= users.category %>">about Korea</option>
+                  <option value="<%= users.category %>">about Italy</option>
+                  <option value="<%= users.category %>">about China</option>
+                  <option value="<%= users.category %>">about Russia</option>
+                  <option value="<%= users.category %>">about Switzerland</option>
+                  <option value="<%= users.category %>">about Sweden</option>
+              </select>
+          </div>
+            <div>
+              <label>Date</label>
+              <input type="date" name="date" class="date-input"  value="<%= users.date %>" required />
+            </div>
+            <div>
+              <input type="submit" value="Upload_file" class="btn btn-big" required>            
+            </input>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-toggle").on("click", function () {
+          $(".nav").toggleClass("showing");
+          $(".nav ul").toggleClass("showing");
+        });
+
+        $(".post-wrapper").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          nextArrow: $(".next"),
+          prevArrow: $(".prev"),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
+        });
+      });
+      src = "https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js";
+      src = "../../js/scripts.js";
+    </script>
+  </body>
+</html>

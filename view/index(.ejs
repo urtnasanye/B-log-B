@@ -1,0 +1,133 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+  <link rel="stylesheet" href="css/creare(users).css">
+  <title>Add User</title>
+<body>
+  <header>
+      <div class="logo">
+          <h1 class="logo-text"><span>Blog</span>Page</h1>
+      </div>
+      <form action="/register" method="POST" ></form>
+      <i class="fa fa-bars menu-toggle"></i>
+      <ul class="nav">
+          <li>
+              <a href="#">
+                  <i class="fa fa-user" ></i>
+                    Admin
+                  <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+              </a>
+              <ul>
+                  <li><a href="/" class="logout">Logout</a></li>
+              </ul>
+          </li>
+      </ul>
+  </header>
+  <div class="admin-wrapper">
+      <div class="left-sidebar">
+          <ul>
+            <li><a href="/indextopics"><i class="fa fa-user"></i>Posts</a></li>
+            <li><a href="/admin"><i class="fa fa-user"></i> Users</a></li>
+            <li><a href="/contactUsers"><i class="fa fa-user"></i> Contact</a></li>
+          </ul>
+      </div>
+      <!-- Admin Content -->
+      <div class="admin-content">
+          <div class="button-group">
+              <a href="/creare" class="btn btn-big">Add User</a>
+              <a href="/admin" class="btn btn-big">Manage Users</a>
+          </div>
+          <div class="content">
+  <h2 class="page-title">Users</h2>
+                    <table>
+                        <thead>
+                            <tr><th>#</th>
+                            <th>Profile</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th colspan="2">Action</th>
+                        </tr></thead>
+                             <tbody>
+                              <%  for(var i=0; i< users.length; i++) {  %>
+                                <tr>
+                                <th><%= users[i].rUsers_id %></th>
+                                <th><%= users[i].user_img %></th>
+                                <th><%= users[i].username %></th>
+                                <th><%= users[i].email %></th>
+                                <td><a href="/edit/<%= users[i].rUsers_id %>" class="edit">edit</a></td>
+                                <td><a href="/delete/<%= users[i].rUsers_id %>" class="delete">delete</a></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+          
+   <!-- <script>src="//code.jquery.com/jquery-3.6.0.min.js"</script>       ajax suulgah buyu j queryg delete deer ashiglay -->
+        <script>
+           src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            $(document).ready(function() {
+  $(".menu-toggle").on("click", function() {
+    $(".nav").toggleClass("showing");
+    $(".nav ul").toggleClass("showing");
+  });
+
+  $(".post-wrapper").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: $(".next"),
+    prevArrow: $(".prev"),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+//delete iin j query
+//$(document).ready(function(){
+ //   $('delete_user').on('click', function(){
+   //   var id= this.rUsers_id;
+     // $.ajax({
+        // url: '/delete/' + id,
+        // type: 'DELETE',
+        // success: function(){
+            //  location.reload();       //tuhain huudsig shineer ajluuldag
+        // },
+        // error : function(error){
+          // console.log(error);
+        // }
+      // })
+    // })
+// });
+</script>
+
+        <link rel="stylesheet" href="js/index(.js">
+</body>
+</html>

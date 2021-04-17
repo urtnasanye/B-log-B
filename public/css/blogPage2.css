@@ -1,0 +1,248 @@
+body {
+  background-color: #add8e6;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #add8e6;
+}
+li {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 35%;
+  transform: none;
+}
+li a {
+  display: block;
+  color: #4c4646;
+  text-align: center;
+  padding: 55px 26px;
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+li a:hover {
+  color: white;
+}
+#doubleBack {
+  margin: auto;
+  background-color: white;
+  width: 85%;
+  height: 1500px;
+  border-radius: 15px;
+}
+div.footer-image-container {
+  position: relative;
+  float: right;
+  margin-top: 1380px;
+}
+p.img {
+  margin-left: 630px;
+  padding-top: 40px;
+  position: absolute;
+  width: 100%;
+}
+
+.image-28 {
+  margin-left: 9.5%;
+  padding-top: 50px;
+  font-size: xx-large;
+  position: absolute;
+}
+
+@media only screen and (max-width: 842px) {
+  .image-28 {
+    float: left;
+    padding-top: 50px;
+    font-size: xx-large;
+    position: absolute;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #add8e6;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    padding-top: 50px;
+    margin-left: 87%;
+  }
+
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover,
+  .dropdown:hover .dropbtn,
+  .dropbtn:focus {
+    color: #4c4646;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: #4c4646;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    color: white;
+  }
+
+  .show {
+    display: block;
+  }
+  li a {
+    display: none;
+  }
+  #doubleBack {
+    margin: auto;
+    margin-top: 127px;
+    background-color: white;
+    width: 85%;
+    height: 1150px;
+    border-radius: 15px;
+  }
+  h1 {
+    text-align: center;
+  }
+  /* div.footer-image-container { */
+  /* position: relative; */
+  /* float: right; */
+  /* width: auto; */
+  /* height: auto; */
+  /* margin-top: 1480px; */
+  /* } */
+}
+@media only screen and (max-width: 1350px) {
+  h5 {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    margin-top: auto;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  h4 {
+    margin-left: 10%;
+    position: absolute;
+    margin-top: auto;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 843px) {
+  .navbar {
+    display: none;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("/w3images/parallax1.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {
+  letter-spacing: 10px;
+}
+.w3-hover-opacity {
+  cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+h4 {
+  margin-left: 10%;
+  position: absolute;
+  margin-top: 33%;
+  width: 60%;
+}
+h3 {
+  width: 85%;
+  position: absolute;
+  margin-top: 89%;
+}
+h5 {
+  margin-left: 10%;
+  position: absolute;
+}
